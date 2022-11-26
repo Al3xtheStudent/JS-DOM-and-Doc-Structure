@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+UATSpace Page for CSC102 at UAT.edu
+by Alex Rodriguez
+Alerodr1@uat.edu
+
+Assignment Launching your UAT Space Program HTML Document Tags 
+12Sep2022
+-->
+
+<html>
+
+<head>
+    <script src="code.js"></script>
+    <!---The 'Script' code is used to link different code languages. HTML will hold HTML and the Java will be Java. Makes it easier to organize code and link! -->
+    <link rel="stylesheet" href="style.css">
+    <!--I found this is another way to link files and create relationships. I linked my css file to my HTML. -->
+    <script src="launchDataDis.js"></script>
+    <script src="dataLoader.js"></script>
+    <title>
+        Alexzander Rodriguez UATSpace page
+    </title>
+    <script>
+        var theTime = new Date();
+        var time_interval = 5000;
+        var running = true;
+        var index = 0;
+        var timer;
+        var data = getData();
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <td><img src="UATspaceLogo-1.jpg"></td> 
+        <td><h1>UAT Space Program</h1></td>
+    </table>
+    <br>
+    <br>
+    <table border="2" width="70%" id="dataTable">
+        <col style="width: 35%;">
+        <col style="width: 35%;">
+        <thead>
+            <th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <tbody>
+            <tr id="seconds"></tr>
+            <tr id="latitude"></tr>
+            <tr id="longitude"></tr>
+            <tr id="gps_altitude"></tr>
+            <tr id="bmp_altitude"></tr>
+            <tr id="bmp_preassure"></tr>
+            <tr id="dig_temperature"></tr>
+            <tr id="css_temperature"></tr>
+            <tr id="css_eC02"></tr>
+            <tr id="css_TVOC"></tr>
+            <tr id="UV"></tr>
+            <tr id="accelX"></tr>
+            <tr id="accelY"></tr>
+            <tr id="accelZ"></tr>
+            <tr id="magneticX"></tr>
+            <tr id="magneticY"></tr>
+            <tr id="magneticZ"></tr>
+            <tr id="GyroX"></tr>
+            <tr id="GyroY"></tr>
+            <tr id="GyroZ"></tr>
+        </tbody>
+
+    </table>
+    <br>
+    The current time is: <div id="ClockTime"> Press start to display time</div>
+
+
+    <!--The UATSpace Logo downloaded from https://synchronic.uat.edu/courses/5195/assignments/187442?module_item_id=494357 -->
+    <!--<h1>
+        UAT Space Program
+    </h1>
+    <p>
+        Test of the paragraph tags. <br>
+        The paragraph tags are used in html to display more than one sentence. <br>
+        This can be more than one line of text <br>
+    </p>
+    
+    <script>
+        alert("Test of alert function. Welcome to UATSpace!");
+        document.write("This is a test of the docement.write function")
+    </script>
+    -->
+
+    <br>
+
+    <button onclick="StartFun();" id="startButton">Start</button>
+
+    <button onclick="StopFun();" id="stopButton"> Stop</button>
+    <br>
+    <br>
+
+    <!--Place to play Craps-->
+    <div id="die1Res">The die 1 result will go here</div><br>
+    <div id="die2Res">The die 2 result will go here</div><br>
+    <div id="gameRes">The game results will go here</div><br>
+    <button onclick="playCraps();">PlayCraps</button>
+<!--This gives the diaplay of the craps and its own button to display on the webpage-->
+<br> 
+<br>
+<!-- We are adding a button to implement our sound.-->
+<h1>Play a sound</h1>
+<button class="button" onclick="playStation();">Play Space Station Sounds</button>
+</body>
+</html>
